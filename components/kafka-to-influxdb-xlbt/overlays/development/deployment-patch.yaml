@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: kafka-to-influxdb-xlbt
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rshah-tenant/kafka-to-influxdb/kafka-to-influxdb-xlbt@sha256:b88d38fc715ecbcaa52686ec0d45e6fa53c388fc787d73acba10341a208ac03b
+        name: container-image
+        resources: {}
+status: {}
