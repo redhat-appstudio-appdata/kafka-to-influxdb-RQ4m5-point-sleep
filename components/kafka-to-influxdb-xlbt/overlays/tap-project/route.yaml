@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: kafka-to-influxdb-xlbt
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: kafka-to-influxdb-xlbt
+    app.kubernetes.io/part-of: kafka-to-influxdb
+  name: kafka-to-influxdb-xlbt08mp
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: kafka-to-influxdb-xlbt
+    weight: 100
+status: {}
